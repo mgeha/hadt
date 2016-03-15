@@ -1,0 +1,27 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+	after *
+}
+
+start() {
+	ebegin "Starting cpupowerd"
+	/usr/sbin/cpupowerd -d -c /etc/cpupowerd.conf
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping cpupowerd"
+	for cpupowerdpid in $(pidof cpupowerd)
+	do
+		kill $cpupowerdpid > /dev/null 2>&1
+		if [ $? -ne 0 ]; then
+			echo " * Stopping cpupowerd with pid $cpupowerdpid failed!"
+		fi
+	done
+	eend $?
+}
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+<email>m.hampickr@t-online.de</email>
+<name>Michael Hampicke</name>
+</maintainer>
+<use>
+<flag name="cron">Install cron script to /etc/cron.daily which runs all backups under /etc/storebackup.d/</flag>
+</use>
+</pkgmetadata>
