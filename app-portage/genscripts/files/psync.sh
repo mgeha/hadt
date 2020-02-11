@@ -1,6 +1,16 @@
 #!/bin/bash
 
-emerge --sync && layman -S && eix-update
+emerge --sync
+
+if [ -f /usr/bin/layman ]
+  then
+    /usr/bin/layman -S
+fi
+
+if [ -f /usr/bin/eix-update ]
+  then
+    /usr/bin/eix-update
+fi
 
 if [ -f /etc/init.d/squash_portage ]
   then
