@@ -17,4 +17,4 @@ if [ -f /etc/init.d/squash_portage ]
     /etc/init.d/squash_portage restart
 fi
 
-emerge -Dupv world
+emerge -Duavg world

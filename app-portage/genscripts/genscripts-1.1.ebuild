@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 DESCRIPTION="Collection of administration scripts for Gentoo"
-HOMEPAGE="http://www.hadt.biz"
+HOMEPAGE="http://hadt.biz"
 
 LICENSE="as-is"
 SLOT="0"
