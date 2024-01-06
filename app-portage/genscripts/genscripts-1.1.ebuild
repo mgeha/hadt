@@ -1,6 +1,3 @@
-# Copyright 1999-2024 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-
 EAPI=8
 
 DESCRIPTION="Collection of administration scripts for Gentoo"
@@ -13,6 +10,12 @@ KEYWORDS="alpha amd64 hppa mips ppc ppc64 sparc x86"
 RDEPEND="
 	app-portage/portage-utils
 	>=app-portage/gentoolkit-0.3"
+
+S=${WORKDIR}
+
+src_unpack() {
+	mkdir -p "${S}"
+}
 
 src_install() {
 	dobin "${FILESDIR}"/upvall.sh || die
